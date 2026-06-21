@@ -86,7 +86,7 @@ contatoWhats[0].addEventListener("mouseleave", () => {
 })
 
 linkedin.addEventListener("click", () => {
-    linkedin.innerHTML = "<a href = https://br.linkedin.com/in/mateus-gil-tavares-74568b203> Acessar Linkedin</a>"
+    linkedin.innerHTML = "<a href = 'https://br.linkedin.com/in/mateus-gil-tavares-74568b203' target = '_blank'> Acessar Linkedin</a>"
 })
 
 linkedin.addEventListener("mouseleave", () => {
