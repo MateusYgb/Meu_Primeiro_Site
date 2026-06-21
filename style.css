@@ -1,0 +1,307 @@
+        /*Aqui criei variáveis que vamos utilizar para as cores da páginas, algumas não todas.*/
+        :root {
+            --roxo-tech: #A78BFA;
+            --roxo-escuro: #7C5CE6;
+            --verde-tech: #7BC47F;
+            --verde-escuro: #4A8F50;
+            --azul-tech: #5B8DEF;
+            --azul-escuro: #2D5BFF;
+            --preto-tech: #1E1E1E;
+            --cinza-tech: #2D3748;
+        }
+
+        html {
+            margin: 0px;
+        }
+
+        body {
+            color: white;
+            background-color: rgb(50, 68, 121);
+            margin: 0px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Criei um container display grid, para organizar o layout da página, também coloquei a margin 0 e auto para centralizar o conteudo */
+        .container {
+            display: grid;
+            grid-column: repeat(10, 1fr);
+            background-color: rgb(60, 79, 136);
+            margin: 0 auto;
+            width: 60%;
+            gap: 20px;
+        }
+        /*Aqui coloquei o header para ocupar toda a tabela do display grid*/
+        header {
+            grid-column: 1/11;
+        }
+        h1{
+            text-align: center;
+            align-items: center;
+        }
+
+        .titulo > p {
+            font-size: 10px;
+            margin-left: 0px;
+            margin-bottom: 0;
+            width: 120px;
+            text-align: center;
+        }
+        /*na tag nav criei um display flex, para organizar os itens, seria os links para outras páginas, portfólio, contato, formação e etc...*/
+        nav {
+            grid-column: 1/11;
+            height: 100px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            border: 4px var(--verde-escuro) solid;
+            border-radius: 10px;
+            padding: 8px;
+            background: var(--verde-tech);
+            color: black;
+        }
+
+        a:hover {
+            background: var(--verde-tech);
+            border: 4px var(--verde-escuro) solid;
+            padding: 14px;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        main {
+            grid-column: 1/11;
+            text-align: center;
+            height: 100%;
+            box-sizing: border-box;
+            width: auto;
+            border: solid rgb(58, 63, 130) 10px;
+            border-radius: 20px;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+        }
+
+        p {
+            line-height: 2.5;
+            text-align: justify;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            align-content: center;
+            grid-column: 1/11;
+            height: 50px;
+        }
+        /*Aqui criei uma sombrinha no final da página, para deixar com um visual mais atrativo. Pesquisei e vi como funciona.*/
+        .sombraBaixo {
+            position: fixed;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #7BC47F;
+            box-shadow:
+                0 0 10px #7BC47F,
+                0 0 20px #7BC47F,
+                0 0 40px #7BC47F;
+        }
+        /*Daqui para baixo eu criei um main para cada link do site, portfólio, contato e formação. Fica mais fácil de me organizar*/
+        .mainContato{
+            width: 100%;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .organizaContato{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        form{
+            grid-row: 3;
+            grid-column-start: 2;
+        }
+        .contatoP{
+            border: solid rgb(53, 71, 126) 10px;
+        }
+        .divContato{
+            border-radius: 50%;
+            background:rgb(60, 79, 136) ;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        
+        .contatoWhats{
+            grid-row-start: 1;
+            grid-column-start: 2;
+        }
+        
+        .linkedinInterativo{
+            grid-row-start: 1;
+            grid-column-start: 3;
+        }
+
+        .meuDiscord{
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+
+        .email{
+            grid-column-start: 3;
+            grid-row-start: 2;
+        }
+        
+        .mainFormacao{
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+        }
+        .mainPortfolio{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: justify;
+        }
+        .mainPortfolio > a {
+            margin: 40px;
+        }
+        .fotoQuadrada{
+            border-radius: 0px;
+            width: 300px;
+            height: 300px;
+        }
+        .organizaFotosPort{
+            display: flex;
+            gap: 100px;
+        }
+        #escuro{
+            position: fixed;
+            margin-top: 20px;
+            margin-left: 5px;
+            padding: 10px;
+            border-radius: 20px;
+            border: solid purple 4px;
+            background-color: rgb(174, 2, 174);
+            color:white;
+        }
+        #claro{
+            position: fixed;
+            margin-top: 70px;
+            margin-left: 5px;
+            padding: 10px;
+            border-radius: 20px;
+            border: solid purple 4px;
+            background-color: rgb(174, 2, 174);
+            color:white;
+        }
+        .fotoHobbie{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            
+        }
+        .boxeHobbie{
+            grid-column-start: 2;
+            grid-row-start: 1;
+        }
+        .kickBoxing{
+            grid-column-start: 3;
+            grid-row-start: 1;
+        }
+        .counter2{
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+        .olhandoMar{
+            grid-column-start: 3;
+            grid-row-start: 2;
+        }
+        /*Aqui seria o media para deixa o site responsivo conforme a largura da tela, aqui organizamos os itens em display flex, na direção de coluna.*/
+        @media (max-width: 768px){
+            
+            /*Aqui mexe na parte sobre mim*/
+            body{
+                display: flex;
+                flex-direction: column;
+                height: 1600px;
+                font-size: 10px;
+                line-height: auto;
+            }
+            header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+            nav{
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                height: 300px;
+            }
+            main{
+              display: flex;
+              flex-direction: column; 
+            }
+            .fotoHobbie{
+                display: flex;
+                flex-direction: column;
+            }
+            
+            
+            /*Aqui mexe na parte do portfólio*/
+            .mainPortfolio{
+                display: flex;
+                flex-direction: column;
+            }
+            .organizaFotosPort{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .organizaFotosPort  img{
+                width: 200px;
+                height: 200px;
+            }
+
+            /*Aqui mexe na parte do contato*/
+           
+            .mainContato{   
+                height: auto;
+            }
+            
+            
+        }
+        /*Eu criei uma segunda media para deixar o site mais responsivo em uma determinada largura*/
+        @media (max-width: 1300px) {
+            .organizaFotosPort{
+                display: flex;
+                flex-direction: column;
+            }
+            .mainContato{
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+            .organizaContato{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
